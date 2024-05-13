@@ -1,0 +1,20 @@
+1 shadcn/ui 
+    - init and start using components by installing
+
+2 React hook form 
+    - Controls form easily, do not have to maintain seperate states for each field
+
+3 sign-up page 
+    - debouncing ->After centain interval we do API call if username is available
+    - npm install usehooks-ts , useDebounceValue (delay state set)
+    - use toast from shadcn/ui and useRouter
+    - axios call(endpoint starts with '/api' other are auto added)
+
+4 verify 
+    - capture username from route and send axios call 
+
+5 login 
+    - calling signIn from next auth  
+
+6 Navbar and message card 
+    - card from shadcn

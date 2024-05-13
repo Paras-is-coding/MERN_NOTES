@@ -1,0 +1,27 @@
+- node js provides and environment to execute server code written in js
+- express is package used to create server code
+
+
+- web based app run in Client-Server model
+ - client -> request creater (brower,mobile app, desktop app)
+ - server -> responder (file server ,web server, smtp ,db)
+
+-packages/modules/library/microframework  -> we use while making project
+
+-monolith <- architecture mostly we use for project in nepal
+-microservice -> architecture for project for big project
+
+
+
+
+-MVC pattern -> organizing code(make flow of code) for s/w development
+
+**view-> request(url/route) -> Controller(handle data from route(eg validate login))  -> model(connected with DB(eg check for login data in DB))
+
+**middleware(between view and controller eg for checking if user is logged in already)
+**service (between controller and model for calling model from controller)
+
+
+--API(phase between request by client ,process by server and getting response)
+
+-- in primary layer we use MVC pattern ,  in internal layer like controller,service we use singleton pattern

@@ -1,0 +1,17 @@
+## ZOD ERROR HANDLING
+- same as multer err handling using instanceof ZodError
+  ->set code:400, message="Generic error!" and result={obj of messages}
+
+## OPERATION LOGIC VS BUSINESS LOGIC
+- additional fields may be required saving client data to database
+
+## VALIDATOR module - eg auth.validator.js
+- add all rules/schema of validation in this file in a variable
+- export variable
+
+## VALIDATOR MIDDLEWARE in middlewares folder 
+    - contain ValidateRequest function that returns middleware and takes schema arg
+    - check the schema of validator with  req.body
+    - call function in router before calling controller
+
+

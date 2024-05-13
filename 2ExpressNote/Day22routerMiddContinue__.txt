@@ -1,0 +1,13 @@
+## ROUTING LEVEL MIDDLEWARE
+
+- create routing middleware using express(ko Middleware object)
+
+- instead of using app level middleware for routing use routing level middleware
+
+- the router we made is different app. so we mount that to express app
+
+- we can group midd. with similar routs but diff. req. methods 
+ router.route(/egcategory) 
+    .get()
+    . _ _ _ 
+- router.use() will always exe. but in hierarchy in which it appear

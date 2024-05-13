@@ -1,0 +1,1 @@
+- Used when we want to share state among multiple components.

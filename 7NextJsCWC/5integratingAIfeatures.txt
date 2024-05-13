@@ -1,0 +1,9 @@
+- AI models gives access to API and we can integrate.
+
+vercel AI and openAI
+    - vercel AI documentation https://sdk.vercel.ai/docs/getting-started
+    STEPS :
+    > install ai openai 
+    > add key to env 
+    > make suggest-messages route
+    > and wireup with frontend

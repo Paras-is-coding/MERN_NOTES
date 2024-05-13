@@ -1,0 +1,80 @@
+## INTRO
+## TWO WAY TO SET WEB-SERVER
+## NODE.JS PROJECT & SERVER SETUP
+## EXPRESS APP SETUP  
+    # MOUNTING APP TO SERVER
+
+----------------------------------------------------------------------------------------- 
+## INTRO
+// nest is express based backend framework
+
+//we need server to write express 
+
+//web server could be anyone 
+, env should be nodejs
+
+
+
+## TWO WAY TO SET WEB-SERVER
+
+    #FIRST WAY CREATE NODE SERVER
+        node.js server -> server application(can be other than express too like socket,graphql)
+        *we use http package to create this server
+
+## NODE.JS PROJECT & SERVER SETUP
+
+    1.  initialize node project 
+    * npm init -y / npm init
+    * create index.js
+
+    2.  create node server
+    * const http = require("http");   
+        -> import http
+        
+    * const server = http.createServer(); 
+         -> create any server app like express,socket,etc and then import and mount that in this function   / it take either whole app or any incomming request 
+        ie createServer(app) / createServer((req,res)=>{
+            res.end("hello world!")  // we do not write  server code with node(but make express app)
+        })
+
+    3.  now listen server in any port of server
+    * server.listen('3005','localhost',(err)=>{
+         if(!err){
+            console.log("Server is running in port 3005");
+            console.log("Press CTRL+C to disconnect your server");
+            console.log("Use http://localhost:3005/ to browse your server");
+        }
+    })                                ->(portno,ipAddress,_)localhost is domain name for our device IP 
+
+
+    - set in package.json at scripts   "start":"nodemon index.js" 
+      for auto server restart
+    - create .gitignore add node_modules/
+
+
+
+## EXPRESS APP SETUP
+// now server is set now we can write server app code using express
+
+* npm i express 
+* mkdir src        -> for express code 
+* mkdir config    -> to hold configurations
+  create file  express.config.js                 ->express.config is filename and .js is ext
+    - write express app 
+    const express = require("express");
+    const app = express();
+    module.exports = app;
+
+// now mount this app in index.js(server)
+
+
+    # SECOND WAY USE EXPRESS AS SERVER
+    - don't use http 
+    - add app.listen()
+
+
+
+
+// TASK -> LOOK EXPRESS ROUTER, MIDDLEWARE
+
+

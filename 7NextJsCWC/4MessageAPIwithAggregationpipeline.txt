@@ -1,0 +1,9 @@
+Message api
+    - POST(status update),GET(tell current status)
+    - GET all messages(aggregation pipeline),POST(save message)
+    - We'll use session to find out logged in user
+
+
+aggregation 
+    - In user, messages[] array of Document type so dumping full array is not that optimized
+    - so, we'll use agg. pipeline

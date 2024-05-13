@@ -1,0 +1,3 @@
+- used switch, seperator from shadcn
+- switch button handled by react-hook-form not state for consistency on codebase
+

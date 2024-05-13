@@ -1,0 +1,7 @@
+1 unique username 
+    - make GET route check-username-unique with username query
+    - get from URL, zod verify and db check
+
+2 verify-code 
+    - get username and code and check for correctness and expiry 
+    

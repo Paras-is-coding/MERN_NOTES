@@ -1,0 +1,66 @@
+## STATIC ROUTES
+## DYNAMIC ROUTES
+	#PARAMETES AND QUERY STRING
+## POSTMAN
+## MIDDLEWARE INTRO
+	#MIDDLEWARE FUNCTION
+## API RESPONSE BODY & RESPONSE CODE
+
+--------------------------------------------------------------------------------------------
+## STATIC ROUTES
+> '/about'  -> plain route no parameters in URL 
+ ->all URL should be registered or 404 error
+
+
+## DYNAMIC ROUTES
+	// define static routes here( eg 'user/detail') above dynamic ones if any 
+
+	app.get('/user/:userID',(req,res)=>{
+			let userID = req.params.userID;   -> receiving params
+			let query = req.query.q;	  -> receiving query (optional)
+						})
+
+ example: 
+-- https://ekantipur.com/sports/2023/10/03/nepals-challenge-ended-after-losing-to-
+       india-42-52.html
+ '/sports/:year/:month/:date/:slug' 
+	 -> URL slug is id for page or post, needs to be unique, and they provide readers and 	    search engines alike with information about the contents of a web page or post
+
+-- https://www.google.com/search?q=broadway    -> here ?q=broadway is called query string
+
+> parameters and query string are ways to pass data to server (url length is limited so we use body to pass data)
+
+
+## POSTMAN
+> we use Postman to test post,put,patch,delete requests __ until we've developed view(frontend)
+
+
+## MIDDLEWARE INTRO
+>> Middleware is just a function with 3 parameters (req,res,next)
+- all incomming requests goes to middleware
+- can respond to client 
+- can call immediate(next) middleware
+- app.use('route',(req,res,next)=>{
+	 			      // if route parm not available , always executes
+         req.aboutUsContent = "data"  // manupulate req - yo data thapina req ma
+	 res.json({})		      // respond to client 
+	 next() 		      // next middleware
+	})
+
+>> If we create middleware a function we can call in route by passing as parameter 
+eg app.post('/about',checkLogin,(req,res)=>{})
+
+
+## API RESPONSE BODY & STATUS CODE
+>> API response body is secondary thing , main thing is status code
+2, 4 and 5 hundred range status code are there
+200 range(success) - 200 201 202 204
+400 range - 400 401 402 403 404 405 422  
+500 range - 500 502 503
+different http status code are available at : http response code mozilla website
+
+> To change status code do - res.status(eg401).json({})
+
+> throttle - limit too many req. comming, server block either IP or prevent self by blocking req. for the file
+
+  

@@ -1,0 +1,13 @@
+1 NextAuth.js -> Auth.js
+    api/auth/[...nextauth]/
+        options.ts -> most of the things like providers,callbacks,etc
+        route.ts -> NextAuth function that takes authOptions
+    src/middleware
+
+
+2 frontend 
+    app/(auth) -> folder with small braces is not considered route but collection
+    app/(auth)/sign-in/page.tsx -> frontend page
+
+3 context 
+    app/context -> make provider(AuthProvider) and wrap body of layout file with it

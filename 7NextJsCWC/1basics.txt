@@ -1,0 +1,37 @@
+
+1 create next app 
+
+2 db models
+src/model - for creating db models
+    - install mongoose(ORM-Gives connection to MongoDB)
+    - create schema and model(with ts,a bit diff)
+
+3 zod
+ src/schema - for zod validation schemas creation(same)
+
+4 database connection
+    src/lib/dbConnect.ts
+    - not continuously connected(once connected) 
+    - Nextjs is Edge time framework(on request app runs)
+    - checkconnection OR connect
+
+
+5 email send and nextAuth(signup)
+    * src/lib/resend.ts - create resend using Resend
+    * src/helpers/sendVerificationEmail.ts - sending email using resend
+    * emails/VerificationEmail.tsx - Design of email
+    * types - define types here for ts 
+
+    - resend email(can use nodemailer as well)
+    - new user - save || verify/update
+
+6 route handling
+    src/app/api/ sign-up/route.ts   : /api/sign-up route handled (make functions GET,POST,PATCH,DELETE)
+    - dbConnect import , needed in every route
+    - UserModel, bcryptjs
+
+        
+
+
+
+    
